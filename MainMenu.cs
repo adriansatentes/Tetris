@@ -27,7 +27,9 @@ namespace Tetris
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            LeaderBoardForm leaderBoardForm = new LeaderBoardForm();
+            leaderBoardForm.ShowDialog();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)

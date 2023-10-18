@@ -4,27 +4,20 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Tetris
 {
-   
-    public partial class GameOverForm : Form
+    public partial class LeaderBoardForm : Form
     {
-        private int score;
-        public GameOverForm(int score)
+        public LeaderBoardForm()
         {
             InitializeComponent();
-            this.score = score;
-            label1.Text = "Score: " + score;
-            label2.Text = "Level: " + score / 10;
-            label3.Text = "Lines " + score;
-     }
+        }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
@@ -32,7 +25,7 @@ namespace Tetris
         private void button1_Click(object sender, EventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
-            mainMenu.Show(this);
+            mainMenu.Show();
             this.Hide();
         }
     }
