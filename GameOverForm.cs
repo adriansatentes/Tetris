@@ -16,6 +16,10 @@ namespace Tetris
    
     public partial class GameOverForm : Form
     {
+        SqlConnection kon = new SqlConnection(); 
+        SqlConnection conn;
+        SqlCommand cmd; 
+        SqlDataReader rd;
         private int score;
         public GameOverForm(int score)
         {
